@@ -11,6 +11,10 @@ class LocationsController < ApplicationController
     # default: render ’new’ template (\app\views\locations\new.html.haml)
   end
 
+  def poi
+    # default: render ’new’ template (\app\views\locations\new.html.haml)
+  end
+
   def create
     # create a new instance variable called @location that holds a Location object built from the data the user submitted
     @location = Location.new(location_params)
