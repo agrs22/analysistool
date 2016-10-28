@@ -38,8 +38,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: at
+  database: dbgjd3cnrvn4eo
   pool: 5
-  username: agrs22
-  password: toor
+  username: qkodwimfrxfhoc
+  password: j8-TY6sGR9pchWlWh5jsoRbNem
   timeout: 5000
