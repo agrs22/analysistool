@@ -12,14 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20120927210553) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "locations", force: :cascade do |t|
-    t.float  "latitude",    null: false
-    t.float  "longitude",   null: false
-    t.string "name"
-    t.string "description"
+    t.float  "latitude",    limit: 53,  null: false
+    t.float  "longitude",   limit: 53,  null: false
+    t.string "name",        limit: 255
+    t.string "description", limit: 255
   end
 
 end

@@ -5,6 +5,9 @@
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:postgresql:at</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.postgres.PostgresExplainPlanProvider</provider>
+      </explain-plan-config>
     </data-source>
     <data-source source="LOCAL" name="Rails analysistool: development" uuid="6f27130f-467f-4168-baf7-2c2f05e2f9e1">
       <driver-ref>98c46f7e-1236-4e92-a5c4-2cc4d175ad24</driver-ref>
@@ -18,6 +21,28 @@
           <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
         </library>
       </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails analysistool: production" uuid="9f22e41e-41a9-4f9e-bf59-f67a66521ca8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:at</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails analysistool: test" uuid="bd8c62b7-565e-47ed-a5f8-7c9d886bd4c1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:at</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails analysistool: development" uuid="41ce782d-8633-431e-a40b-7897bc47a8a3">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/at</jdbc-url>
     </data-source>
   </component>
 </project>

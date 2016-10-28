@@ -4,10 +4,29 @@
     <data-source name="Rails analysistool: development" uuid="e6ba14de-cdc0-4bd2-ba32-1c507366c3fa">
       <database-info product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
       <secret-storage>memory</secret-storage>
+      <auth-required>false</auth-required>
     </data-source>
     <data-source name="Rails analysistool: development" uuid="6f27130f-467f-4168-baf7-2c2f05e2f9e1">
       <database-info product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
       <secret-storage>memory</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Rails analysistool: production" uuid="9f22e41e-41a9-4f9e-bf59-f67a66521ca8">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>agrs22</user-name>
+      <user-password>dfdedfc5dfc5dfd8</user-password>
+    </data-source>
+    <data-source name="Rails analysistool: test" uuid="bd8c62b7-565e-47ed-a5f8-7c9d886bd4c1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>memory</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>agrs22</user-name>
+    </data-source>
+    <data-source name="Rails analysistool: development" uuid="41ce782d-8633-431e-a40b-7897bc47a8a3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>agrs22</user-name>
     </data-source>
   </component>
 </project>

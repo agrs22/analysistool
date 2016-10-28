@@ -1,0 +1,55 @@
+
+---
+locations:
+  columns:
+  - id
+  - latitude
+  - longitude
+  - name
+  - description
+  records: 
+  - - 1
+    - 31.825408
+    - -116.59421
+    - Ciudad Deportiva
+    - 
+  - - 2
+    - 31.871267
+    - -116.662703
+    - CICESE
+    - 
+  - - 3
+    - 31.872079
+    - -116.619798
+    - Central de Autobuses
+    - 
+  - - 6
+    - 31.867423
+    - -116.62351
+    - Central Transportes Vigia
+    - 
+  - - 7
+    - 31.865525
+    - -116.623006
+    - Central Transportes Brisa
+    - 
+  - - 8
+    - 31.824622
+    - -116.600218
+    - Hospital General
+    - 
+  - - 9
+    - 31.82134
+    - -116.600261
+    - Walmart
+    - 
+  - - 10
+    - 31.817894
+    - -116.596892
+    - Costco
+    - 
+  - - 11
+    - 31.854973
+    - -116.616038
+    - Casa
+    - 
