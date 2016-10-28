@@ -6,13 +6,14 @@ Analysistool::Application.routes.draw do
   #get "locations/show"
   #
   #get "locations/edit"
+  #
+  get "locations/agrs"
 
   resources :locations do
     collection do
       get :destroy_all
     end
   end
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
