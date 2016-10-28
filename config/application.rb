@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
+config.assets.initialize_on_precompile = false
 
 module Analysistool
   class Application < Rails::Application
