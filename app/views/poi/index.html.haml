@@ -1,4 +1,4 @@
-%h1.title Create new Location of Interest
+%h1.title Point of Interest by radius
 
 = form_tag locations_path, method: :post do
 
@@ -8,12 +8,8 @@
   = label :location, :longitude, 'Longitude'
   = text_field :location, :longitude
 
-  = label :location, :Radio, 'Radio'
-  = text_field :location, :Radio
-
+  = label :location, :radius, 'Radius'
+  = text_field :location, :radius
 
   %p
   = submit_tag 'Save Changes'
-
-%p
-= link_to 'Back to location list', locations_path
