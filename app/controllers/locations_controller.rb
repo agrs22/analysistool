@@ -11,8 +11,14 @@ class LocationsController < ApplicationController
     # default: render ’new’ template (\app\views\locations\new.html.haml)
   end
 
-  def agrs
-    # default: render ’agrs’ template (\app\views\locations\agrs.html.haml)
+  def snpi
+    if location_near[:latitude]
+      @location = Location.new({:latitude => location_near[:latitude], :longitude => location_near[:longitude], :name => '', :description => ''})
+      @locations = Location.get_near_locations(@location,Location.all,location_near[:radius])
+
+      # to json format
+      @locations_json = @locations.to_json
+    end
   end
 
   def create
@@ -75,5 +81,13 @@ class LocationsController < ApplicationController
 
   def location_params
     params.require(:location).permit(:latitude, :longitude, :description, :name)
+  end
+
+  def location_near
+    params.permit(:latitude, :longitude, :radius)
+  end
+
+  def location_route
+    params.permit(:route, :radius)
   end
 end

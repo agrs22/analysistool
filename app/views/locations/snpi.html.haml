@@ -1,0 +1,35 @@
+%h1.title Show Nearby Points of Interest
+
+= form_tag snpi_path, method: :post do
+
+  = label :latitude, 'Latitude'
+  = text_field_tag :latitude
+
+  = label  :longitude, 'Longitude'
+  = text_field_tag :longitude
+
+  = label :radius, 'Radius'
+  = text_field_tag :radius
+
+  %p
+  = submit_tag 'SNPI'
+
+%input#locations{type: 'hidden', value: @locations_json}
+-unless @locations == nil
+  %table#table
+    %thead
+      %tr
+        %th Name
+        %th Latitude
+        %th Longitude
+        %th Description
+    %tbody
+      - @locations.each do |location|
+        %tr
+          %td= location.name
+          %td= location.latitude
+          %td= location.longitude
+          %td= location.description
+
+%p
+= link_to 'Back to location list', locations_path

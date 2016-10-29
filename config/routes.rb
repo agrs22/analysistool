@@ -7,15 +7,12 @@ Analysistool::Application.routes.draw do
   #
   #get "locations/edit"
   #
-  get "locations/agrs"
-
-  resources :locations do
-    collection do
-      get :destroy_all
-    end
+  scope path: '/locations', controller: :locations do
+    get 'snpi' => :snpi
+    post 'snpi' => :snpi
   end
 
-  resources :poi do
+  resources :locations do
     collection do
       get :destroy_all
     end
