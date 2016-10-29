@@ -1,0 +1,37 @@
+%h1.title Convex hull
+
+.map
+  %div#map
+
+%input#params{type: 'hidden', value: @params_json}
+%input#locations{type: 'hidden', value: @params[:convex_hull].to_json}
+
+
+%table#table
+  %thead
+    %tr
+      %th Name
+      %th Latitude
+      %th Longitude
+      %th Description
+  %tbody
+    - @params[:convex_hull].each do |location|
+      %tr
+        %td= location.name
+        %td= location.latitude
+        %td= location.longitude
+        %td= location.description
+
+%p
+  = label :perimeter, 'Perimeter: ' + @params[:perimeter].to_s
+
+%p
+  = label :distance_from_home, 'Farthest location from home: ' + @params[:farthest_distance_from_home].to_s
+
+= link_to 'Back to location list', locations_path
+
+= javascript_include_tag '/assets/maps/OpenLayers'
+= javascript_include_tag '/assets/maps/locations'
+
+:javascript
+  initMap($("#locations").val());

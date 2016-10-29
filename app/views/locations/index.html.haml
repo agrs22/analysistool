@@ -1,6 +1,13 @@
 %h1.title All Locations of Interest
+
 %p=link_to 'Show Nearby Points of Interest', snpi_path
+
+%p=link_to 'Get Convex Hull', convex_path
+
+%p=link_to 'JSON Visited Locations', visited_path
+
 .map
+
   %div#map
 
 %input#locations{type: 'hidden', value: @locations_json}

@@ -1,0 +1,32 @@
+%h1.title Show visited locations
+
+= form_tag visited_locations_path, multipart: true do
+
+  = label :route, 'Route'
+  = file_field_tag :route, :accept => '.json', :class => 'upload'
+
+  = label :radius, 'Radius'
+  = text_field_tag :radius
+
+  %p
+  = submit_tag 'Get visited locations'
+
+%input#locations{type: 'hidden', value: @locations_json}
+-unless @locations == nil
+  %table#table
+    %thead
+      %tr
+        %th Name
+        %th Latitude
+        %th Longitude
+        %th Description
+    %tbody
+      - @locations.each do |location|
+        %tr
+          %td= location.name
+          %td= location.latitude
+          %td= location.longitude
+          %td= location.description
+
+%p
+= link_to 'Back to location list', locations_path
