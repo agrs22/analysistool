@@ -7,6 +7,7 @@ Analysistool::Application.routes.draw do
   #
   #get "locations/edit"
   #
+  root :to => 'locations#index'
   scope path: '/locations', controller: :locations do
     get 'snpi' => :snpi
     post 'snpi' => :snpi
