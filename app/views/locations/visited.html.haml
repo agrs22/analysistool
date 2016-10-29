@@ -1,15 +1,15 @@
-%h1.title Show visited locations
+%h1.title JSON Visited Locations
 
 = form_tag visited_path, multipart: true do
-
-  = label :route, 'Route'
-  = file_field_tag :route, :accept => '.json', :class => 'upload'
 
   = label :radius, 'Radius'
   = text_field_tag :radius
 
+  = label :route, 'JSON file'
+  = file_field_tag :route, :accept => '.json', :class => 'upload'
+
   %p
-  = submit_tag 'Get visited locations'
+  = submit_tag 'Get Locations'
 
 %input#locations{type: 'hidden', value: @locations_json}
 -unless @locations == nil
