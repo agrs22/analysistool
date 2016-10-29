@@ -11,7 +11,6 @@ Analysistool::Application.routes.draw do
     get 'snpi' => :snpi
     post 'snpi' => :snpi
     get 'convex' => :convex
-    post 'convex' => :convex
     get 'visited' => :visited
     post 'visited' => :visited
   end
