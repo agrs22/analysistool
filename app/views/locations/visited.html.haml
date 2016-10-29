@@ -1,6 +1,6 @@
 %h1.title Show visited locations
 
-= form_tag visited_locations_path, multipart: true do
+= form_tag visited_path, multipart: true do
 
   = label :route, 'Route'
   = file_field_tag :route, :accept => '.json', :class => 'upload'
