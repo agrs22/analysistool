@@ -21,6 +21,25 @@ class LocationsController < ApplicationController
     end
   end
 
+  def convex
+    @all_locations = Location.all
+    @convex_hull_locations = Location.convex_hull(@all_locations)
+    @perimeter = Location.perimeter(@convex_hull_locations)
+    @farthest_distance_from_home = Location.get_farthest_distance(Location.find_by_name('Casa'), @all_locations)
+
+    @params = {:convex_hull => @convex_hull_locations, :perimeter => @perimeter, :farthest_distance_from_home => @farthest_distance_from_home}
+    # to json format
+    @params_json = @params.to_json
+  end
+
+  def visited
+
+    if location_route[:route]
+      @locations = Location.get_visited_locations(location_route[:route].read, location_route[:radius])
+      @locations_json = @locations.to_json
+    end
+  end
+
   def create
     # create a new instance variable called @location that holds a Location object built from the data the user submitted
     @location = Location.new(location_params)

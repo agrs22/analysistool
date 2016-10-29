@@ -10,6 +10,10 @@ Analysistool::Application.routes.draw do
   scope path: '/locations', controller: :locations do
     get 'snpi' => :snpi
     post 'snpi' => :snpi
+    get 'convex' => :convex
+    post 'convex' => :convex
+    get 'visited' => :visited
+    post 'visited' => :visited
   end
 
   resources :locations do
