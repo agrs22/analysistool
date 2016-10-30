@@ -1,4 +1,9 @@
-%h1.title Convex hull
+%h1.title Get the Convex Hull
+%p
+  = label :perimeter, 'The Perimeter of our Convex Hull is: ' + @params[:perimeter].to_s
+
+%p
+  = label :distance_from_home, 'The farthest POI from home is: ' + @params[:farthest_distance_from_home].to_s
 
 .map
   %div#map
@@ -22,11 +27,6 @@
         %td= location.longitude
         %td= location.description
 
-%p
-  = label :perimeter, 'Perimeter: ' + @params[:perimeter].to_s
-
-%p
-  = label :distance_from_home, 'Farthest location from home: ' + @params[:farthest_distance_from_home].to_s
 
 = link_to 'Back to location list', locations_path
 

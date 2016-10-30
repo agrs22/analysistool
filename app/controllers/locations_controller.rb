@@ -11,12 +11,14 @@ class LocationsController < ApplicationController
     # default: render ’new’ template (\app\views\locations\new.html.haml)
   end
 
+  #Controler to get nearby points of interest
   def snpi
-    if location_near[:latitude]
-      @location = Location.new({:latitude => location_near[:latitude], :longitude => location_near[:longitude], :name => '', :description => ''})
-      @locations = Location.get_near_locations(@location,Location.all,location_near[:radius])
-
-      # to json format
+    if latlonra[:latitude]
+      #Creates new location to be matched
+      @location = Location.new({:latitude => latlonra[:latitude], :longitude => latlonra[:longitude], :name => '', :description => ''})
+      #Runs Get SNPI from models/location.rb
+      @locations = Location.get_snpi(@location,Location.all, latlonra[:radius])
+      #Uses orinila parameter for @Locations_json
       @locations_json = @locations.to_json
     end
   end
@@ -102,7 +104,7 @@ class LocationsController < ApplicationController
     params.require(:location).permit(:latitude, :longitude, :description, :name)
   end
 
-  def location_near
+  def latlonra
     params.permit(:latitude, :longitude, :radius)
   end
 
