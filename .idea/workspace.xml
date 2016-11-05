@@ -4,14 +4,7 @@
     <list default="true" id="7bad3602-3c59-49cf-b150-cee4a0d1d471" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/maps/OpenLayers.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/maps/locations.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/analysistool.iml" afterPath="$PROJECT_DIR$/.idea/analysistool.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/gps_samples_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/gps_samples_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/gps_sample.rb" afterPath="$PROJECT_DIR$/app/models/gps_sample.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/gps_samples/index.html.haml" afterPath="$PROJECT_DIR$/app/views/gps_samples/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/gps_samples/locbyuser.html.haml" afterPath="$PROJECT_DIR$/app/views/gps_samples/locbyuser.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/gps_samples/new.html.haml" afterPath="$PROJECT_DIR$/app/views/gps_samples/new.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/data.yml" afterPath="$PROJECT_DIR$/db/data.yml" />
     </list>
     <ignored path="analysistool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +25,7 @@
     <SUITE FILE_PATH="coverage/analysistool@db_load__analysistool.coverage" NAME="db:load: analysistool Coverage Results" MODIFIED="1478363870916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="analysistool" />
     <SUITE FILE_PATH="coverage/analysistool@db_setup__analysistool.coverage" NAME="db:setup: analysistool Coverage Results" MODIFIED="1477626497899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="analysistool" />
     <SUITE FILE_PATH="coverage/analysistool@db_dump__analysistool.coverage" NAME="db:dump: analysistool Coverage Results" MODIFIED="1478363524270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="analysistool" />
-    <SUITE FILE_PATH="coverage/analysistool@Development__analysistool.coverage" NAME="Development: analysistool Coverage Results" MODIFIED="1478367714827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="analysistool" />
+    <SUITE FILE_PATH="coverage/analysistool@Development__analysistool.coverage" NAME="Development: analysistool Coverage Results" MODIFIED="1478368574081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="analysistool" />
     <SUITE FILE_PATH="coverage/analysistool@assets_precompile__analysistool.coverage" NAME="assets:precompile: analysistool Coverage Results" MODIFIED="1477675319993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="analysistool" />
     <SUITE FILE_PATH="coverage/analysistool@Production__analysistool.coverage" NAME="Production: analysistool Coverage Results" MODIFIED="1477720714337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="analysistool" />
   </component>
@@ -112,8 +105,8 @@
       <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/gps_samples/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
+            <state relative-caret-position="330">
+              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -772,7 +765,7 @@
       <workItem from="1478205089501" duration="8000" />
       <workItem from="1478221236290" duration="22026000" />
       <workItem from="1478363474963" duration="464000" />
-      <workItem from="1478367007407" duration="1009000" />
+      <workItem from="1478367007407" duration="1680000" />
     </task>
     <task id="LOCAL-00001" summary="Git integration to RubyMine">
       <created>1349897661161</created>
@@ -825,7 +818,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65249000" />
+    <option name="totallyTimeSpent" value="65920000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1156,8 +1149,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/gps_samples/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
+        <state relative-caret-position="330">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
           <folding />
         </state>
       </provider>
