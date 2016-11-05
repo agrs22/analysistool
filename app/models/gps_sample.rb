@@ -11,7 +11,7 @@ class Gps_sample < ActiveRecord::Base
   	end
 
 	def self.get_locbyuser(user)
-		self.where(user: user_n[user])
+		self.where(user: user)
 	end
 
 end
