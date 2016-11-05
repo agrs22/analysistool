@@ -1,0 +1,29 @@
+%h1.title Get all locations by username
+
+= form_tag locbyuser_path, multipart: :post do
+
+  = label :who, 'User'
+  = text_field_tag :who
+
+%p
+  = submit_tag 'Get Locations'
+
+%input#locations{type: 'hidden', value: @gps_json}
+-unless @gps == nil
+  %table#table
+    %thead
+      %tr
+        %th Name
+        %th Latitude
+        %th Longitude
+        %th Description
+    %tbody
+      - @gps.each do |location|
+        %tr
+          %td= location.name
+          %td= location.latitude
+          %td= location.longitude
+          %td= location.description
+
+%p
+= link_to 'Back to location list', locations_path

@@ -2,14 +2,16 @@ class LocationsController < ApplicationController
   def index
     # get all locations in the table locations
     @locations = Location.all
-
+    @gps = Gps_sample.all
     # to json format
     @locations_json = @locations.to_json
   end
 
+
   def new
     # default: render ’new’ template (\app\views\locations\new.html.haml)
   end
+
 
   #Controler to get nearby points of interest
   def snpi

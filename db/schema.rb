@@ -10,13 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20120927210553) do
+ActiveRecord::Schema.define(version: 20161104200420) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "gps_samples", force: :cascade do |t|
+    t.float   "latitude",     null: false
+    t.float   "longitude",    null: false
+    t.string  "name"
+    t.string  "description"
+    t.integer "usernames_id"
+    t.integer "username_id"
+    t.string  "user"
+    t.index ["username_id"], name: "index_gps_samples_on_username_id", using: :btree
+    t.index ["usernames_id"], name: "index_gps_samples_on_usernames_id", using: :btree
+  end
 
   create_table "locations", force: :cascade do |t|
-    t.float  "latitude",    limit: 53,  null: false
-    t.float  "longitude",   limit: 53,  null: false
+    t.float  "latitude",                null: false
+    t.float  "longitude",               null: false
     t.string "name",        limit: 255
     t.string "description", limit: 255
   end
 
+  create_table "usernames", force: :cascade do |t|
+    t.string   "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "password"
+    t.string   "auth_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "userwloc", force: :cascade do |t|
+    t.string "user",        null: false
+    t.float  "latitude",    null: false
+    t.float  "longitude",   null: false
+    t.string "name"
+    t.string "description"
+  end
+
+  create_table "userylocs", force: :cascade do |t|
+  end
+
+  add_foreign_key "gps_samples", "usernames"
+  add_foreign_key "gps_samples", "usernames", column: "usernames_id"
 end

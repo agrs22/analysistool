@@ -1,12 +1,19 @@
 Analysistool::Application.routes.draw do
+  resources :usernames
+  resources :users
   #get "locations/index"
   #
   #get "locations/new"
   #
   #get "locations/show"
   #
-  #get "locations/edit"
+  scope path: '/gps_samples', controller: :gps_samples do
+    get 'locbyuser'
+    post 'locbyuser'
+  end
+
   #
+
   root :to => 'locations#index'
   scope path: '/locations', controller: :locations do
     get 'snpi' => :snpi
@@ -21,6 +28,13 @@ Analysistool::Application.routes.draw do
       get :destroy_all
     end
   end
+
+  resources :gps_samples do
+    collection do
+      get :destroy_all
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,32 @@
+%h1.title JSON Visited Locations
+
+= form_tag gps_samples_path, multipart: :post do
+
+  = label :who, 'User'
+  = text_field_tag :who
+
+  = label :route, 'JSON file'
+  = file_field_tag :route, :accept => '.json', :class => 'upload'
+
+  %p
+  = submit_tag 'Upload Locations'
+
+%input#locations{type: 'hidden', value: @gps_json}
+-unless @gps == nil
+  %table#table
+    %thead
+      %tr
+        %th Name
+        %th Latitude
+        %th Longitude
+        %th Description
+    %tbody
+      - @gps.each do |location|
+        %tr
+          %td= location.name
+          %td= location.latitude
+          %td= location.longitude
+          %td= location.description
+
+%p
+= link_to 'Back to location list', locations_path
