@@ -12,7 +12,10 @@ class GpsSamplesController < ApplicationController
   end
   def locbyuser
     # default: render ’new’ template (\app\views\locations\new.html.haml)
-    @gps = Gps_sample.where(user: user_n[:who])
+    #@gps = Gps_sample.where(user: user_n[:who])
+    #@gps_json = @gps.to_json
+    @gps = Gps_sample.all
+    # to json format
     @gps_json = @gps.to_json
   end
   def create
