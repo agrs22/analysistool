@@ -8,22 +8,50 @@
 %p
   = submit_tag 'Get Locations'
 
-%input#locations{type: 'hidden', value: @gps_json}
--unless @gps == nil
-  %table#table
-    %thead
-      %tr
-        %th Name
-        %th Latitude
-        %th Longitude
-        %th Description
-    %tbody
-      - @gps.each do |location|
-        %tr
-          %td= location.name
-          %td= location.latitude
-          %td= location.longitude
-          %td= location.description
+.map
 
-%p
-= link_to 'Back to location list', locations_path
+  %div#map
+
+%input#locations{type: 'hidden', value: @gps_json}
+
+%table#table
+  %thead
+    %tr
+      %th Name
+      %th Latitude
+      %th Longitude
+      %th Description
+      %th
+      %th
+  %tbody
+    - @gps.each do |location|
+      %tr
+        %td= location.name
+        %td= location.latitude
+        %td= location.longitude
+        %td= location.description
+        %td= link_to 'Edit', edit_gps_sample_path(location)
+        %td= link_to 'Delete', gps_sample_path(location), method: :delete, data: { confirm: 'Are you sure?' }
+
+-#%p= show_flash
+-#%p= flash[:notice]
+-#
+-#%div.container
+-#  - flash.each do |key, value|
+-#    .flash(class=key)= value
+-#    -#%div."alert alert-<%= key %>"= value
+-#  = yield
+
+-flash.each do |key, value|
+  .alert{:class => "alert-#{key}"}
+    =value
+
+%p=link_to 'Create new location', new_gps_sample_path
+
+%p=link_to 'Delete all', destroy_all_gps_samples_path, method: :get, confirm: 'Are you sure?'
+
+= javascript_include_tag '/assets/maps/OpenLayers'
+= javascript_include_tag '/assets/maps/locations'
+
+:javascript
+  initMap($("#locations").val());
