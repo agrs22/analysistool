@@ -11,6 +11,7 @@
   %thead
     %tr
       %th Name
+      %th User
       %th Latitude
       %th Longitude
       %th Description
@@ -20,6 +21,7 @@
     - @gps.each do |location|
       %tr
         %td= location.name
+	%td= location.user
         %td= location.latitude
         %td= location.longitude
         %td= location.description
